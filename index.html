@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MavAlliance — С Новым годом!</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="snow"></div>
+
+<main class="container">
+    <h1 id="typing-title" aria-live="polite"></h1>
+    <p class="subtitle">Новый год — новая точка роста для нашего сообщества</p>
+
+    <div class="card-wrapper">
+        <button class="arrow left" id="prev" aria-label="Предыдущая карточка">&lt;</button>
+
+        <section class="card active">
+            <p>
+                Добро пожаловать на новогоднюю страницу <strong>MavAlliance</strong> — сервер для друзей.
+            </p>
+            <p>
+                Я, а если конкретно - Sol Daze` (Даниил Вейформович/Дезойлетович), хочу поздравить наш прекрасный
+                и чудесный сервер для друзей с Новым годом от всей души!
+            </p>
+        </section>
+
+        <section class="card">
+            <h2 class="card-title">Активные участники</h2>
+
+            <div class="avatars">
+                <div class="avatar" data-name="Sol Daze`" data-text="Один из олдов MavAlliance и по совместительству один из админов сервера, разговорчивый и смешливый, очень много говорит и многое знает, очень много хныкает, недолюблювает Юлю." >
+                    <div class="avatar-img" data-letter="S">
+                        <img src="sol daze`.jpg" alt="Sol daze`" loading="lazy" onerror="this.remove()">
+                    </div>
+                    <span>Sol daze`</span>
+                </div>
+
+                <div class="avatar" data-name="MavEneus" data-text="Главный администратор сервера и основатель MavAlliance, весёлый разговорчивый но консервативный в плане &quot;во что бы поиграть&quot;, иногда не следит за языком и никогда не научится следить за временем. Любит Юлю">
+                    <div class="avatar-img" data-letter="M">
+                        <img src="MavEneus.jpg" alt="MavEneus" loading="lazy" onerror="this.remove()">
+                    </div>
+                    <span>MavEneus</span>
+                </div>
+
+                <div class="modal" id="easterModal">
+                <div class="modal-content">
+                <button class="modal-close" id="easterClose">×</button>
+                <div class="modal-avatar" id="easterAvatar"></div>
+                <h3 id="easterName"></h3>
+                <p id="easterText"></p>
+                </div>
+                </div>
+
+                <div class="avatar" data-name="Gaz" data-text="Заместитель создателя сервера, весёлый разговорчивый, но переодично абсолютно серый неразговорчивый злой всем недовольный, смешной. Хочет увести Юлю(любит Настю)">
+                    <div class="avatar-img" data-letter="G">
+                        <img src="Gaz.jpg" alt="Gaz" loading="lazy" onerror="this.remove()">
+                    </div>
+                    <span>Gaz</span>
+                </div>
+            </div>
+
+            <h3 class="card-title" style="margin-top: 40px;"></h3>
+
+            <div class="avatars">
+                <div class="avatar" data-name="Анастэйша🔪" data-text="Довольно не долго находится на сервере но стала частью MavAlliance, частый игрок в дбд, лучший сейвер фонариком, добрая, смешная.">
+                    <div class="avatar-img" data-letter="A">
+                        <img src="anastasia.jpg" alt="Анастэйша🔪" loading="lazy" onerror="this.remove()">
+                    </div>
+                    <span>Анастэйша🔪</span>
+                </div>
+
+                <div class="avatar" data-name="Goose" data-text="Довольно не богатый казахстаненц, очень любит кумыс заходить поболтать, и в принципе крутой челик.">
+                    <div class="avatar-img" data-letter="N">
+                        <img src="Goose.png" alt="Goose" loading="lazy" onerror="this.remove()">
+                    </div>
+                    <span>Goose</span>
+                </div>
+
+                <div class="avatar" data-name="keyniaa" data-text="Очень смешливый, громкий, разговорчивый... сын шлюхи">
+                    <div class="avatar-img" data-letter="K">
+                        <img src="keyniaa.jpg" alt="keyniaa" loading="lazy" onerror="this.remove()">
+                    </div>
+                    <span>keyniaa</span>
+                </div>
+
+                <div class="avatar" data-name="yulia.d." data-text="Заигрывает с создателем сервера, да и в принципе довольно вёсёлая и позитивная девчуля">
+                    <div class="avatar-img" data-letter="Y">
+                        <img src="yulia.d.jpg" alt="yulia.d." loading="lazy" onerror="this.remove()">
+                    </div>
+                    <span>yulia.d.</span>
+                </div>
+            </div>
+        </section>
+
+        <section class="card">
+            <h2 class="card-title" id="nominationTrigger">Номинации года 🏆</h2>
+        
+            <div class="nominations">
+                <div class="nomination">
+                    <span class="nomination-title">🎙 Самый громкий крик</span>
+                    <span class="nomination-name nomination-link">keyniaa</span>
+                </div>
+            
+                <div class="nomination">
+                    <span class="nomination-title">🕒 «Отойду на 2 часа вместо 50 минут»</span>
+                    <span class="nomination-name nomination-link">MavEneus</span>
+                </div>
+
+                <div class="nomination">
+                    <span class="nomination-title">🥲 Главный нытик сервера</span>
+                    <span class="nomination-name nomination-link">Sol Daze`</span>
+
+                </div>
+            
+                <div class="nomination">
+                    <span class="nomination-title">😶 Самый недовольный участник</span>
+                    <span class="nomination-name nomination-link">Gaz</span>
+                </div>
+
+                <div class="nomination">
+                    <span class="nomination-title">🔦 Лучший сейвер фонариком</span>
+                    <span class="nomination-name nomination-link">Анастэйша🔪</span>
+                </div>
+            
+                <div class="nomination">
+                    <span class="nomination-title">🍺 Самое большое количество выпитого кумыса</span>
+                    <span class="nomination-name nomination-link">Goose</span>
+                </div>
+
+                <div class="nomination">
+                    <span class="nomination-title">🔞 Наибольшее количество подкатов</span>
+                    <span class="nomination-name nomination-link">yulia.d.</span>
+                </div>
+
+                <button class="secret-button" id="secretBtn">
+                    🔮 Анонс нового проекта
+                </button>
+
+            </div>
+        </section>
+
+
+        <button class="arrow right" id="next" aria-label="Следующая карточка">&gt;</button>
+    </div>
+
+    <div class="indicators" id="indicators"></div>
+</main>
+
+<div class="modal" id="memberModal">
+    <div class="modal-content">
+        <button class="modal-close" id="modalClose">×</button>
+        <div class="modal-avatar" id="modalAvatar"></div>
+        <h3 id="modalName"></h3>
+        <p id="modalText"></p>
+    </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
