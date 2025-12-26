@@ -549,14 +549,24 @@ h1 {
     }
 
     .nomination {
-        flex-direction: column;
+        flex-direction: row;        
         align-items: flex-start;
-        gap: 6px;
+        gap: 10px;
+        flex-wrap: wrap;              
+    }
+
+    .nomination-title {
+        flex: 1 1 auto;
+        white-space: normal;       
     }
 
     .nomination-name {
+        flex: 0 0 auto;
+        white-space: nowrap;      
         font-weight: 700;
+        margin-left: auto;          
     }
+
 
     .indicators {
         gap: 8px;
@@ -620,5 +630,6 @@ h1 {
         font-size: 0.9rem;
     }
 }
+
 
 
