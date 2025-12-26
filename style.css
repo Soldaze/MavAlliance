@@ -429,68 +429,196 @@ h1 {
 
 /* --- Мобильная адаптация стрелок и карточек --- */
 @media (max-width: 1024px) {
+
     .container {
         padding: 80px 15px 30px;
     }
+
     h1 {
         font-size: 2.6rem;
     }
+
     .card {
         padding: 40px 20px;
+        position: relative; 
     }
+
+    .arrow {
+        font-size: 2.4rem;
+        padding: 8px 12px;
+        z-index: 10;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+
+    .arrow.left {
+        left: 8px;          
+    }
+
+    .arrow.right {
+        right: 8px;
+    }
+
     .avatars {
         grid-template-columns: repeat(3, 1fr);
         gap: 16px;
     }
+
     .avatar-img {
         width: 80px;
         height: 80px;
     }
+
     .modal-avatar {
         width: 100px;
         height: 100px;
     }
+
     .card-title {
         font-size: 1.4rem;
     }
+
     .subtitle {
         font-size: 1rem;
         margin-bottom: 30px;
     }
-    .arrow {
-        font-size: 2.5rem;
-        padding: 6px 10px;
-        z-index: 5; /* стрелки поверх карточек */
+
+    .nomination {
+        flex-direction: row;
+        gap: 12px;
     }
-    .arrow.left { left: 10px; }
-    .arrow.right { right: 10px; }
+
+    .nomination-title,
+    .nomination-name {
+        font-size: 0.95rem;
+    }
 }
 
 @media (max-width: 768px) {
-    h1 { font-size: 2.2rem; }
-    .container { padding: 60px 15px 20px; }
-    .card { padding: 30px 15px; }
-    .avatars { grid-template-columns: repeat(2, 1fr); gap: 12px; }
-    .avatar-img { width: 70px; height: 70px; }
-    .modal-avatar { width: 90px; height: 90px; }
-    .card-title { font-size: 1.2rem; margin-bottom: 20px; }
-    .subtitle { font-size: 0.95rem; margin-bottom: 25px; }
-    .arrow.left { left: 10px; }
-    .arrow.right { right: 10px; }
-    .arrow { font-size: 2rem; padding: 5px 8px; }
-    .indicators { gap: 8px; }
+
+    .container {
+        padding: 60px 14px 20px;
+    }
+
+    h1 {
+        font-size: 2.2rem;
+    }
+
+    .card {
+        padding: 30px 16px;
+    }
+
+    .arrow {
+        font-size: 2rem;
+        padding: 6px 10px;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+
+    .arrow.left {
+        left: 6px;
+    }
+
+    .arrow.right {
+        right: 6px;
+    }
+
+    .avatars {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 12px;
+    }
+
+    .avatar-img {
+        width: 70px;
+        height: 70px;
+    }
+
+    .modal-avatar {
+        width: 90px;
+        height: 90px;
+    }
+
+    .card-title {
+        font-size: 1.2rem;
+        margin-bottom: 20px;
+    }
+
+    .subtitle {
+        font-size: 0.95rem;
+        margin-bottom: 25px;
+    }
+
+    .nomination {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 6px;
+    }
+
+    .nomination-name {
+        font-weight: 700;
+    }
+
+    .indicators {
+        gap: 8px;
+    }
 }
 
 @media (max-width: 480px) {
-    h1 { font-size: 1.8rem; }
-    .container { padding: 50px 12px 15px; }
-    .card { padding: 25px 12px; }
-    .avatars { grid-template-columns: 1fr; gap: 12px; }
-    .avatar-img { width: 60px; height: 60px; }
-    .modal-avatar { width: 80px; height: 80px; }
-    .card-title { font-size: 1.1rem; }
-    .subtitle { font-size: 0.9rem; margin-bottom: 20px; }
-    .arrow.left { left: 8px; }
-    .arrow.right { right: 8px; }
-    .arrow { font-size: 1.8rem; padding: 4px 6px; z-index: 5; }
+
+    .container {
+        padding: 50px 12px 15px;
+    }
+
+    h1 {
+        font-size: 1.8rem;
+    }
+
+    .card {
+        padding: 25px 14px;
+    }
+
+    .arrow {
+        font-size: 1.7rem;
+        padding: 6px 8px;
+        z-index: 15;
+    }
+
+    .arrow.left {
+        left: 4px;
+    }
+
+    .arrow.right {
+        right: 4px;
+    }
+
+    .avatars {
+        grid-template-columns: 1fr;
+        gap: 12px;
+    }
+
+    .avatar-img {
+        width: 60px;
+        height: 60px;
+    }
+
+    .modal-avatar {
+        width: 80px;
+        height: 80px;
+    }
+
+    .card-title {
+        font-size: 1.1rem;
+    }
+
+    .subtitle {
+        font-size: 0.9rem;
+        margin-bottom: 20px;
+    }
+
+    .nomination-title,
+    .nomination-name {
+        font-size: 0.9rem;
+    }
 }
+
+
