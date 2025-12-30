@@ -41,3 +41,6 @@ window.addEventListener('load', () => {
         location.href = 'index.html';
     }
 });
+
+document.addEventListener('selectstart', e => e.preventDefault());
+document.addEventListener('contextmenu', e => e.preventDefault());
