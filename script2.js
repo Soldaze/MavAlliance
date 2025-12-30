@@ -1,29 +1,27 @@
 document.addEventListener('DOMContentLoaded', () => {
-    const snowContainer = document.querySelector('.snow');
+    const snow = document.querySelector('.snow');
+    const FLAKES = window.innerWidth < 768 ? 50 : 110;
 
-    if (snowContainer) {
-        const flakesCount = 40;
-
-        function resetFlake(flake) {
-            flake.style.left = Math.random() * 100 + 'vw';
-            flake.style.fontSize = 12 + Math.random() * 14 + 'px';
-            flake.style.opacity = 0.3 + Math.random() * 0.7;
-            const duration = 6 + Math.random() * 6;
-            const delay = Math.random() * 5;
-            flake.style.animation = `fall ${duration}s linear ${delay}s infinite`;
-        }
-
-        for (let i = 0; i < flakesCount; i++) {
-            const flake = document.createElement('div');
-            flake.className = 'flake';
-            flake.textContent = '❄';
-            resetFlake(flake);
-            snowContainer.appendChild(flake);
-
-            flake.addEventListener('animationiteration', () => resetFlake(flake));
-        }
+    for (let i = 0; i < FLAKES; i++) {
+        const flake = document.createElement('div');
+        flake.className = 'flake';
+        flake.textContent = '❄';
+        resetFlake(flake, true);
+        snow.appendChild(flake);
+        flake.addEventListener('animationend', () => resetFlake(flake));
     }
 
+    function resetFlake(flake, initial = false) {
+        flake.style.animation = 'none';
+        flake.style.left = Math.random() * 100 + 'vw';
+        flake.style.top = initial ? Math.random() * -100 + 'vh' : '-10px';
+        flake.style.fontSize = 6 + Math.random() * 10 + 'px';
+        flake.style.opacity = 0.3 + Math.random() * 0.7;
+        const duration = 9 + Math.random() * 10;
+        void flake.offsetWidth;
+        flake.style.animation = `fall ${duration}s linear`;
+    }
+    
     const wrapper = document.querySelector('.video-wrapper');
     const video = document.getElementById('secret-video');
 
@@ -64,3 +62,4 @@ document.addEventListener('DOMContentLoaded', () => {
     document.addEventListener('selectstart', e => e.preventDefault());
     document.addEventListener('contextmenu', e => e.preventDefault());
 });
+
