@@ -1,3 +1,26 @@
+const snow = document.querySelector('.snow');
+    const FLAKES = window.innerWidth < 768 ? 50 : 110;
+
+    for (let i = 0; i < FLAKES; i++) {
+        const flake = document.createElement('div');
+        flake.className = 'flake';
+        flake.textContent = '❄';
+        resetFlake(flake, true);
+        snow.appendChild(flake);
+        flake.addEventListener('animationend', () => resetFlake(flake));
+    }
+
+    function resetFlake(flake, initial = false) {
+        flake.style.animation = 'none';
+        flake.style.left = Math.random() * 100 + 'vw';
+        flake.style.top = initial ? Math.random() * -100 + 'vh' : '-10px';
+        flake.style.fontSize = 6 + Math.random() * 10 + 'px';
+        flake.style.opacity = 0.3 + Math.random() * 0.7;
+        const duration = 9 + Math.random() * 10;
+        void flake.offsetWidth;
+        flake.style.animation = `fall ${duration}s linear`;
+    }
+
 const wrapper = document.querySelector('.video-wrapper');
 const video = document.getElementById('secret-video');
 
@@ -44,3 +67,4 @@ window.addEventListener('load', () => {
 
 document.addEventListener('selectstart', e => e.preventDefault());
 document.addEventListener('contextmenu', e => e.preventDefault());
+
