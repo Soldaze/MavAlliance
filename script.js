@@ -198,3 +198,17 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
 });
+
+const flash = document.getElementById('flashOverlay');
+
+document.querySelectorAll('.avatar').forEach(avatar => {
+    avatar.addEventListener('click', () => {
+        const name = avatar.dataset.name;
+
+        if (name === 'Анастэйша🔪') {
+            flash.classList.remove('active'); 
+            void flash.offsetWidth;            
+            flash.classList.add('active');
+        }
+    });
+});
