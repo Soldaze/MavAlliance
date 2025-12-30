@@ -1,25 +1,22 @@
-const snow = document.querySelector('.snow');
-    const FLAKES = window.innerWidth < 768 ? 50 : 110;
+const snowContainer = document.querySelector('.snow');
 
-    for (let i = 0; i < FLAKES; i++) {
+if (snowContainer) {
+    const flakesCount = 40;
+
+    for (let i = 0; i < flakesCount; i++) {
         const flake = document.createElement('div');
         flake.className = 'flake';
         flake.textContent = '❄';
-        resetFlake(flake, true);
-        snow.appendChild(flake);
-        flake.addEventListener('animationend', () => resetFlake(flake));
-    }
 
-    function resetFlake(flake, initial = false) {
-        flake.style.animation = 'none';
         flake.style.left = Math.random() * 100 + 'vw';
-        flake.style.top = initial ? Math.random() * -100 + 'vh' : '-10px';
-        flake.style.fontSize = 6 + Math.random() * 10 + 'px';
-        flake.style.opacity = 0.3 + Math.random() * 0.7;
-        const duration = 9 + Math.random() * 10;
-        void flake.offsetWidth;
-        flake.style.animation = `fall ${duration}s linear`;
+        flake.style.fontSize = 12 + Math.random() * 14 + 'px';
+        flake.style.opacity = Math.random();
+        flake.style.animationDuration = 6 + Math.random() * 6 + 's';
+        flake.style.animationDelay = Math.random() * 5 + 's';
+
+        snowContainer.appendChild(flake);
     }
+}
 
 const wrapper = document.querySelector('.video-wrapper');
 const video = document.getElementById('secret-video');
@@ -67,4 +64,5 @@ window.addEventListener('load', () => {
 
 document.addEventListener('selectstart', e => e.preventDefault());
 document.addEventListener('contextmenu', e => e.preventDefault());
+
 
