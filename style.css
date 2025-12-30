@@ -631,5 +631,21 @@ h1 {
     }
 }
 
+.flash-overlay {
+    position: fixed;
+    inset: 0;
+    background: white;
+    opacity: 0;
+    pointer-events: none;
+    z-index: 9999;
+}
 
+.flash-overlay.active {
+    animation: flash 0.25s ease-out;
+}
 
+@keyframes flash {
+    0%   { opacity: 0; }
+    30%  { opacity: 1; }
+    100% { opacity: 0; }
+}
